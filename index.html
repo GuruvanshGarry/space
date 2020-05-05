@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>Garry's Space</title>
+
+    <!-- Link to Favicon -->
+    
+    
+    <!-- link to css file -->
+    <link rel="stylesheet" href="css/main.css" media="screen">
+    
+    <!-- link to js files -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/vendor/gsap.min.js"></script>
+</head>
+
+<body>
+    <!--tablet-->
+<div id="tablet">
+        <!-- main -->
+        <main>
+            <div id="homeScreen">
+                <div id="btnContainer">
+                    <div id="icons" class="icon1">
+                        <p id="icontext">Drumpad</p>
+                        <img class="drumpadicon" src="images/drumpadIcon.png" alt="">
+                    </div>
+                    <div id="icons" class="icon2">
+                        <p id="icontext">Wallpaper</p>
+                        <img class="wallpapericon" src="images/wallpaperIcon.png" alt="">
+                    </div>
+                    <div id="icons" class="icon3">
+                        <p id="icontext">WordJuggle</p>
+                        <img class="wordjuggleicon" src="images/WordjiggleIcon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+<!---------Drumpad App Start------------>
+            <div id="drumpad_app">
+
+                <!-- Logo -->
+                <div id="drumpad_loading">
+                    <img src="images/drumpadIcon.png" alt="Loading..." />
+                </div>
+
+                <!-- SCREEN -->
+                <section id="drumpad_screen">
+                    <div class="close">X</div>
+                    <div id="drumpad_topbar">
+                        <div class="buttons">
+                            <button class="record-button btn1"></button>
+                            <button class="play-button btn2">Play</button>
+                            <button class="stop-button btn3">stop</button>
+                        </div>
+                    </div>
+                    <div class="drumpad_keycontainer">
+                        <div data-key="81" class="pad"><kbd>Q</kbd><span class="sound">Kick</span></div>
+                        <div data-key="87" class="pad"><kbd>W</kbd><span class="sound">Clap</span></div>
+                        <div data-key="69" class="pad"><kbd>E</kbd><span class="sound">HitHat</span></div>
+                        <div data-key="82" class="pad"><kbd>R</kbd><span class="sound">openhat</span></div>
+                        <div data-key="84" class="pad"><kbd>T</kbd><span class="sound">Shaker</span></div>
+                        <div data-key="89" class="pad"><kbd>Y</kbd><span class="sound">ride</span></div>
+                        <div data-key="85" class="pad"><kbd>U</kbd><span class="sound">snare</span></div>
+                        <div data-key="73" class="pad"><kbd>I</kbd><span class="sound">tamb</span></div>
+                        <div data-key="79" class="pad"><kbd>O</kbd><span class="sound">drum</span></div>
+                        <div data-key="80" class="pad"><kbd>P</kbd><span class="sound">crash</span></div>
+                    </div>
+                <!-- Audio -->
+                    <audio data-key="81" id="81"src="audio/kick.wav"></audio>
+                    <audio data-key="87" id="87"src="audio/clap.wav"></audio>
+                    <audio data-key="69" id="69"src="audio/closedhithat.wav"></audio>
+                    <audio data-key="82" id="82"src="audio/openhithat.wav"></audio>
+                    <audio data-key="84" id="84"src="audio/shaker.wav"></audio>
+                    <audio data-key="89" id="89"src="audio/ride.wav"></audio>
+                    <audio data-key="85" id="85"src="audio/snare.wav"></audio>
+                    <audio data-key="73" id="73"src="audio/tambourine.wav"></audio>
+                    <audio data-key="79" id="79"src="audio/khol.wav"></audio>
+                    <audio data-key="80" id="80"src="audio/crash.wav"></audio>
+                </section>
+            </div><!--App End-->
+
+
+
+
+<!---------Wallpaper----------->
+            <div id="wallpaper_app">
+
+                <!-- Logo -->
+                <div id="wallpaper_loading">
+                    <img src="images/wallpaperIcon.png" alt="Loading..." />
+                </div>
+
+                <!-- SCREEN -->
+                <section id="wallpaperscreen">
+                    <h1>Choose Your Wallpaper</h1>
+                    <div id="wallpaper_container">
+                        <label for="file" class="card"><h2 id="upload">+</h2>
+                            <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+                            <div class="bgchangetext">Upload</div>
+                        </label>
+                        <div class="card" id="bg1" data-background='url(./images/background1.jpg)'>
+                            <div class="bgchangetext">Set Wallpaper</div>
+                        </div>
+                        <div class="card" id="bg2" data-background='url(./images/background2.jpg)'>
+                            <div class="bgchangetext">Set Wallpaper</div>
+                        </div>
+                        <div class="card" id="bg3" data-background='url(./images/background3.jpg)'>
+                            <div class="bgchangetext">Set Wallpaper</div>
+                        </div>
+                        <div class="card" id="bg4" data-background='url(./images/background4.jpg)'>
+                            <div class="bgchangetext">Set Wallpaper</div>
+                        </div>
+                        <div class="card" id="bg5" data-background='url(./images/background5.jpg)'>
+                            <div class="bgchangetext">Set Wallpaper</div>
+                        </div>
+                        <div class="card" id="bg6" data-background='url(./images/background6.jpg)'>
+                            <div class="bgchangetext">Set Wallpaper</div>
+                        </div>
+                        <div class="card" id="bg7" data-background='url(./images/background7.jpg)'>
+                            <div class="bgchangetext">Set Wallpaper</div>
+                        </div>
+                        <div class="card" id="bg8" data-background='url(./images/background8.jpg)'>
+                            <div class="bgchangetext">Set Wallpaper</div>
+                        </div>
+                        <div class="card" id="bg9" data-background='url(./images/background9.jpg)'>
+                            <div class="bgchangetext">Set Wallpaper</div>
+                        </div>
+                        <div class="card" id="bg10" data-background='url(./images/background10.jpg)'>
+                            <div class="bgchangetext">Set Wallpaper</div>
+                        </div>
+                        <div class="card" id="bg11" data-background='url(./images/background11.jpg)'>
+                            <div class="bgchangetext">Set Wallpaper</div>
+                        </div>
+                        <div class="card" id="bg12" data-background='url(./images/background12.jpg)'>
+                            <div class="bgchangetext">Set Wallpaper</div>
+                        </div>
+                        <div class="card" id="bg13" data-background='url(./images/background13.jpg)'>
+                            <div class="bgchangetext">Set Wallpaper</div>
+                        </div>
+                        <div class="card" id="bg14" data-background='url(./images/background14.jpg)'>
+                            <div class="bgchangetext">Set Wallpaper</div>
+                        </div>
+                        <div class="card" id="bg15" data-background='url(./images/background15.jpg)'>
+                            <div class="bgchangetext">Set Wallpaper</div>
+                        </div>
+                    </div>
+                    <div class="close">X</div>
+                </section>
+            </div><!--End App-->
+
+
+<!---------Word Juggle----------->
+
+            <div id="wordjuggle_app">
+
+                <!-- Logo -->
+                <div id="wordjuggle_loading">
+                    <img src="images/WordjiggleIcon.png" alt="Loading..." />
+                </div>
+
+                <section id="wordjuggleScreen">
+                    <div id="hint">
+                        <img src="images/bulboff.png" onmouseover="this.src='images/bulbon.png'" onmouseout="this.src='images/bulboff.png'">
+                        <br><p class='hint'></p>
+                    </div>
+                    <h1 id="wordjuggleHeading">Solve this juggled word</h1>
+                    <div id="juggle_container">
+                        <p id="messedWord"></p>
+                        <div class="timer" id="timer"></div>
+                        <textarea id="wordInput" class="word_input" autofocus></textarea>
+                        <div id="progress">
+                        <p>Progress</p><p class="word_display" id="wordDisplay"></p>
+                        </div>
+                    </div>
+                    <div class="close">X</div>
+                    <!--Audios-->
+                    <audio id="yayy" src="audio/yayy.mp3"></audio>
+                </section>
+            </div>
+
+
+        </main>
+</div>
+
+
+        <!-- link to main js file -->
+        <script src="js/main.js"></script>
+    
+</body>
+
+</html>
